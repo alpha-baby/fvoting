@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-ch">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="FVoting.js"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <title>FVoting</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/open-iconic/1.0.0/font/css/open-iconic-bootstrap.css">
+</head>
+
+<body id="body">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" id="DAppName-title">title</a>
+            </div>
+
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div class="container">
+        <div class="row margin-top-3">
+            <div class="col-sm-12">
+                <h3 id="contractPublishName">How to use the DApp: </h3>
+                <strong>Step 1</strong>: Install the <a href="https://metamask.io/" target="_blank">metamask plugin</a>
+                and create an account on it and load some Ether. 
+                <br><br>
+                <strong>Step 2</strong>: Purchase tokens below by entering the total number of tokens you like to buy.
+                <br><br>
+                <strong>Step 3</strong>: Vote for candidates by entering their name of weight to vote with.
+                <br><br>
+                <strong>Step 4</strong>: Enter your account address to look up your voting activity.
+                <br><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 iterm">
+                <div class="panel-heading panel-primary">
+                    <h2>Vote Project Infomation</h2>
+                </div>
+                <div class="panel-body" id="voteProjectInfo">
+                </div>
+
+                <div class="panel-heading panel-primary">
+                    <h2>your account infomation</h2>
+                </div>
+                <div class="panel-body" id="accountInfomation">
+                </div>
+
+                
+
+                <!-- Table -->
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Candidate</th>
+                            <th>Vote Count</th>
+                            <th>your vote</th>
+                        </tr>
+                    </thead>
+                    <tbody id="candidate-rows">
+                        
+                    </tbody>
+                </table>
+
+                
+            </div>
+            <div class="col-md-4 iterm">
+                <h2>Create New Vote Project</h2>
+                <div id="msg"></div>
+                <input type="text" id="voteProjectName" class="form-control" placeholder="vote Project Name" />
+                <br>
+                <input type="text" id="voteProjectNowTime" class="form-control" placeholder="vote Project begin Time" />
+                <br>
+                <input type="text" id="voteProjectEndTime" class="form-control" placeholder="vote Project End Time" />
+                <br>
+                <input type="text" id="voteProjectWeightPrice" class="form-control" placeholder="vote Project Weight Price" />
+                <br>
+                <input type="text" id="voteProjectAllWeight" class="form-control" placeholder="vote Project All Weight" />
+                <br>
+                <input type="text" id="voteProjectCandidates" class="form-control" placeholder="Enter the candidate names array" />
+                <br>
+                <a href="#" id="create" onclick="App.create()" class="btn btn-primary">Vote</a>
+
+
+                <h2>Purchase Weight</h2>
+                <div id="buy-msg"></div>
+                <input type="text" id="buy" class="col-sm-8" placeholder="Number of tokens to buy">
+                <a href="#" id="buyTokens" onclick="App.buy()" class="btn btn-primary">Buy</a>
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class=" col-md-6" >
+                <h2>Vote for Candidate</h2>
+                <div id="msg"></div>
+                <input type="text" id="candidate" class="form-control" placeholder="Enter the candidate name" />
+                <br>
+                <br>
+                <input type="text" id="vote-weight" class="form-control" placeholder="Total no. of tokens to vote" />
+                <br>
+                <br>
+                <a href="#" id="voteForCandidate" onclick="App.vote()" class="btn btn-primary">Vote</a>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="record-content">
+        <div class="panel-heading panel-primary">
+            <h2>voting detail record</h2>
+        </div>
+        <!-- vote recored Table -->
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>addr</th>
+                    <th>candidate</th>
+                    <th>time</th>
+                    <th>weight</th>
+                </tr>
+            </thead>
+            <tbody id="record-rows">
+                
+            </tbody>
+        </table>
+
+    </div>
+
+    <h2 align="center">List of voting project</h2>
+    <div class="container" id="main-content">
+
+
+    </div>
+</body>
+
+</html>

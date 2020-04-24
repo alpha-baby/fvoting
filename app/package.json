@@ -1,0 +1,28 @@
+{
+  "name": "FVoting",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "dev": "webpack-dev-server"
+  },
+  "devDependencies": {
+    "bootstrap": "^3.4.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.0.5",
+    "css-loader": "^3.4.2",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.0.4",
+    "jquery": "^3.4.1",
+    "open-iconic": "^1.1.1",
+    "style-loader": "^1.1.3",
+    "url-loader": "^4.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "dependencies": {
+    "web3": "^1.2.4"
+  }
+}
