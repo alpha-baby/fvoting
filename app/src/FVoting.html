@@ -31,14 +31,12 @@
         <div class="row margin-top-3">
             <div class="col-sm-12">
                 <h3 id="contractPublishName">How to use the DApp: </h3>
-                <strong>Step 1</strong>: Install the <a href="https://metamask.io/" target="_blank">metamask plugin</a>
+                <strong>Step 1</strong>: Install the <a href="https://metamask.io/" target="_blank">MetaMask plugin</a>
                 and create an account on it and load some Ether. 
                 <br><br>
-                <strong>Step 2</strong>: Purchase tokens below by entering the total number of tokens you like to buy.
+                <strong>Step 2</strong>: Purchase weight by entering the total number of weight you like to buy.
                 <br><br>
                 <strong>Step 3</strong>: Vote for candidates by entering their name of weight to vote with.
-                <br><br>
-                <strong>Step 4</strong>: Enter your account address to look up your voting activity.
                 <br><br>
             </div>
         </div>
@@ -92,12 +90,12 @@
                 <br>
                 <input type="text" id="voteProjectCandidates" class="form-control" placeholder="Enter the candidate names array" />
                 <br>
-                <a href="#" id="create" onclick="App.create()" class="btn btn-primary">Vote</a>
+                <a href="#" id="create" onclick="App.create()" class="btn btn-primary">Create</a>
 
 
                 <h2>Purchase Weight</h2>
                 <div id="buy-msg"></div>
-                <input type="text" id="buy" class="col-sm-8" placeholder="Number of tokens to buy">
+                <input type="text" id="buy" class="col-sm-8" placeholder="Number of weight to buy">
                 <a href="#" id="buyTokens" onclick="App.buy()" class="btn btn-primary">Buy</a>
                 
             </div>
@@ -109,7 +107,7 @@
                 <input type="text" id="candidate" class="form-control" placeholder="Enter the candidate name" />
                 <br>
                 <br>
-                <input type="text" id="vote-weight" class="form-control" placeholder="Total no. of tokens to vote" />
+                <input type="text" id="vote-weight" class="form-control" placeholder="you want to vote with weight" />
                 <br>
                 <br>
                 <a href="#" id="voteForCandidate" onclick="App.vote()" class="btn btn-primary">Vote</a>
