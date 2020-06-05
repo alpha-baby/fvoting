@@ -232,7 +232,7 @@ App.create = async function() {
     let i5 = $("#voteProjectAllWeight").val(); 
     i5 = parseInt(i5);
     let i6 = $("#voteProjectCandidates").val(); 
-    i6 = JSON.parse(i6);
+    i6 = await JSON.parse(i6);
 
     let result = await App.createVoteProject(i1,i2,i3,i4,i5,i6);
     projectNumber++;
